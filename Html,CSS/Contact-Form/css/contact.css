@@ -212,10 +212,11 @@ textarea.input {
 
 .social-information {
     display: flex;
+    flex-direction: column;
     color: #555;
     margin: 0.7rem 0;
-    align-items: center;
-    font-size: 0.95rem;
+    align-items: flex-start;
+    font-size: 1rem;
 }
 
 .icon {
@@ -265,10 +266,11 @@ textarea.input {
 }
 
 .social-information i {
-    font-size: 22px;
+    font-size: 25px;
     margin-bottom: 23px;
     margin-right: 8px;
     color: #0c0b0b;
+    /* border: 2px solid black; */
 }
 
 .big-circle {
@@ -386,4 +388,20 @@ textarea.input {
     .btn {
         padding: 0.45rem 1.2rem;
     }
+}
+
+.homeicon{
+    width: 3vw;
+    padding: 3px;
+    /* border: 2px solid red; */
+}
+
+.emailicon{
+    width: 3vw;
+    padding: 3px;
+}
+
+.phoneicon{
+    width: 3vw;
+    padding: 3px;
 }
