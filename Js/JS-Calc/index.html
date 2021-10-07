@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="theme.js"></script>
+    <title>Calculator using JS</title>
+  </head>
+
+  <body>
+
+    <div class="toogle-theme">
+      <button id="theme-switcher" class="round">Switch Theme!</button>
+    </div>
+
+
+    <div class="container">
+      <h1>Calculator</h1>
+      <h4>Press AC to start!!!</h4>
+
+      
+
+      <div class="calculator">
+        <input type="text" name="screen" id="screen" />
+
+        <table>
+          <tr>
+            <td><button class="numpad oper">AC</button></td>
+            <td><button class="numpad oper">CE</button></td>
+            <td><button class="numpad oper">%</button></td>
+            <td><button class="numpad oper">/</button></td>
+          </tr>
+          <tr>
+            <td><button class="numpad num">7</button></td>
+            <td><button class="numpad num">8</button></td>
+            <td><button class="numpad num">9</button></td>
+            <td><button class="numpad oper">x</button></td>
+          </tr>
+          <tr>
+            <td><button class="numpad num">4</button></td>
+            <td><button class="numpad num">5</button></td>
+            <td><button class="numpad num">6</button></td>
+            <td><button class="numpad oper">-</button></td>
+          </tr>
+          <tr>
+            <td><button class="numpad num">1</button></td>
+            <td><button class="numpad num">2</button></td>
+            <td><button class="numpad num">3</button></td>
+            <td><button class="numpad oper">+</button></td>
+          </tr>
+          <tr>
+            <td><button class="numpad num">0</button></td>
+            <td><button class="numpad num">.</button></td>
+            <td><button class="numpad num"></button></td>
+            <td><button class="numpad equal">=</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+
+  <script>
+    $( ".change" ).on("click", function() {
+        if( $( "body" ).hasClass( "dark" )) {
+            $( "body" ).removeClass( "dark" );
+            $( ".change" ).text( "OFF" );
+        } else {
+            $( "body" ).addClass( "dark" );
+            $( ".change" ).text( "ON" );
+        }
+    });
+</script>
+</html>
