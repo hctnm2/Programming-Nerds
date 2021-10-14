@@ -1,0 +1,51 @@
+/* raleway-100 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local(''),
+
+       url('../fonts/raleway-v18-latin-100.ttf') format('truetype'),
+
+}
+/* raleway-200 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  src: local(''),
+       url('../fonts/raleway-v18-latin-200.ttf') format('truetype'),
+
+}
+/* raleway-300 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+
+  src: local(''),
+
+       url('../fonts/raleway-v18-latin-300.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/raleway-v18-latin-regular.ttf') format('truetype'),
+
+}
+/* raleway-500 - latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+
+  src: local(''),
+
+
+       url('../fonts/raleway-v18-latin-500.ttf') format('truetype'),
+
+}
+
