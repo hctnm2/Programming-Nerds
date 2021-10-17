@@ -1,0 +1,80 @@
+html{
+    background: var(--backg);
+    --btn:#2ab1ce;
+    --backg:#fff;
+    --colorx:#232323;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+html[data-theme='dartheme']{
+    background: var(--backg);
+    --btn:#ea4b3c;
+    --backg:#232323;
+    --colorx:#fff;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    color: var(--colorx);
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: var(--colorx);
+}
+
+input[type=checkbox]{
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+label{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 55px;
+    height: 30px;
+    background: var(--btn);
+}
+
+label-after{
+    border-radius: 50%;
+    position: absolute;
+    content: '';
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+    left: 4px;
+    transition: ease-in-out 200ms;
+}
+
+input:checked+label{
+    background: #ea4b3c;
+}
+
+input:checked +label::after{
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after{
+    transition: ease-in-out 200ms !important;
+    transition-delay: 0 !important;
+}
