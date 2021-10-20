@@ -1,0 +1,146 @@
+//A program for train  bookings
+#include<iostream>
+
+#include<fstream>
+using namespace std;
+class emp
+{
+    public:
+    char name[20],train[30],reach[30];
+    int id,m;char time[20];
+
+
+public:
+
+    void trnid()
+    {
+
+      cout<<"\n  *  Enter Train ID        : ";
+      cin>>id;
+      cin.ignore(2,'\n');
+      cout<<"\n  *  Enter Origin of train : ";
+      cin.getline(train,30);
+      cout<<"\n  *  Enter departure       : ";
+      cin.getline(reach,30);
+      cout<<"\n  *  Enter time            : ";
+      cin.getline(time,30);
+    }
+    void display()
+    {
+    cout<<"\n   # Train ID     : "<<id;
+    cout<<"\n   # Train Origin : "<<train;
+    cout<<"\n   # Departure    : "<<reach;
+    cout<<"\n   # Time         : "<<time;
+    }
+int delete_data()
+{
+return id;
+}
+
+
+
+
+};
+main()
+{
+
+    cout<<endl;
+    cout<<endl;
+    cout<<endl;
+    cout<<"************************************************************************************************************************";
+    cout<<"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tWELCOME TO AR";
+    cout<<"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t  TICKET  BOOKINGS  CENTER\t";
+    cout<<"\n\n************************************************************************************************************************";
+    int a;
+do{
+
+
+
+
+    cout<<"\n ---> 1.Set Train";
+    cout<<"\n ---> 2.Display all Trains";
+    cout<<"\n ---> 3.Delete Trains";
+    cout<<"\n ---> 4.EXIT";
+    cout<<endl;
+    cout<<"\n ---> Enter your choice ";
+    cin>>a;
+    emp ob;
+    switch(a)
+    {
+    case 1:
+      {
+
+
+        fstream fout;
+        fout.open("bsid.dat",ios::app|ios::binary);
+
+        ob.trnid();
+        fout.write((char*)&ob,sizeof(ob));
+        fout.close();
+        break;
+      }
+    case 2:
+     {
+
+        ifstream fin;
+     fin.open("bsid.dat",ios::binary);
+
+
+                while(fin.read((char*)&ob,sizeof(ob)));
+                {
+                    ob.display();
+                }
+
+
+        fin.close();
+        break;
+
+
+
+
+     }
+    case 3:
+        {
+            int chk=0;
+            int id2;
+            cout<<"enter the id to be deleted";
+            cin>>id2;
+            emp ob;
+            ifstream fin;
+            fin.open("bsid.dat",ios::binary);
+            ofstream fout;
+            fout.open("temp.dat",ios::out|ios::binary);
+            while(fin.read((char*)&ob,sizeof(ob)))
+            {
+
+            if(ob.delete_data()!=id2)
+                fout.write((char*)&ob,sizeof(ob));
+                else
+                {
+                    ob.display();
+                    chk=1;
+                }
+
+            }
+            if(chk==0)
+            {
+                cout<<"bus not found";
+            }
+            else
+            {
+                cout<<"bus deleted";
+            }
+            fin.close();
+            fout.close();
+            remove("bsid.dat");
+            rename("temp.dat","bsid.dat");
+        }
+    default:
+        cout<<"\n\tInvalid Option :( \n\n";
+         exit(0);
+
+
+    }
+
+    }while(a!=4);
+}
