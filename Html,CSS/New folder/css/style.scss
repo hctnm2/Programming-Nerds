@@ -1,0 +1,321 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+$Raleway:'Raleway', sans-serif;
+$red:#f6685e;
+$blue_bg:#241a71;
+$grey:#e9e8f0;
+$white:#fff;
+
+body{
+    width:100%;  
+    display:block;
+    height:100vh;
+    overflow: hidden;  
+    font-family: $Raleway; 
+    position: relative;
+}
+.dFlex{
+    display:flex;
+    justify-content: center;
+    align-items:center
+}
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    position:relative;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #03a9f43b, white,white);
+    transform-style: preserve-3d;
+    flex-direction: column;
+    img{
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+}//container
+
+header{
+    @extend .dFlex;
+    width:100%;
+    height:80px;
+    margin:0 auto;
+    padding:0 10%;
+    color:$blue_bg;
+    box-sizing: border-box;
+    nav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        .menu{
+            @extend .dFlex;
+            .logo{
+                font-size:16px;
+                font-weight: bold;
+                margin-right:50px;
+                text-transform: uppercase;
+                color:$blue_bg;
+                span{
+                    color:$red;
+                }
+            }
+            ul{
+                margin:0;
+                padding: 0;
+                list-style-type: none;
+                @extend .dFlex;
+                li{
+                    font-size:12px;
+                    font-weight:500;
+                    cursor: pointer;
+                    text-transform: uppercase;
+                    +li{
+                        margin-left:15px;
+                    }
+                }//li
+            }//ul
+        }//menu
+
+        .myAccount{
+            .ctaGroup{
+                @extend .dFlex;
+                .cta{
+                    width:135px;
+                    height:35px;
+                    border:1px solid $red;
+                    font-size:12px;
+                    font-weight: 500;
+                    border-radius: 35px;
+                    color:$red;
+                    @extend .dFlex;
+                    cursor: pointer;
+                    +.cta{
+                        margin-left:15px;
+                    }
+                    &.active{
+                        background-color:$red;
+                        color:$white;
+                    }
+                }
+            }//ctaGroup
+        }//myAccount
+    }//nav
+}//header
+
+.hotel_content{
+    display:block;
+    text-align: center;
+    width:768px;
+    margin:0 auto;
+    position:relative;
+    z-index:10;
+    margin-top:50px;
+}//hotel_content
+
+.info{
+    h2{
+      color:$blue_bg;
+    }
+    p{
+        font-size: 12px;
+    }
+}//info
+
+.booking_info{
+    margin-top:-15px;
+    .opt{
+        @extend .dFlex;
+        justify-content: flex-start;
+        position:relative;
+        top:30px;
+        z-index:1;
+        span{
+            width:130px;
+            height:70px;
+            border-radius: 20px;
+            background-color: $grey;
+            cursor: pointer;
+            @extend .dFlex;
+            align-items: flex-start;
+            font-size: 14px;
+            position:relative;
+            z-index:2;
+            padding-top:15px;
+            box-sizing: border-box;
+            &.active{
+                background-color: $blue_bg;
+                color:$white;
+            }
+            +span{
+                left:-15px;
+                z-index: 1;
+            }
+        }
+    }//opt
+}//booking_info
+
+.booking_details{
+    background-color: $white;
+    height:60px;
+    border-radius: 15px;
+    position:relative;
+    z-index: 2;
+    box-shadow: 1px 1px 20px 0px rgba(50,50,50,.3);
+    @extend .dFlex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 15px;
+    box-sizing: border-box;
+    .item{
+        font-size:10px;
+        padding:0 10px 0 20px;
+        box-sizing: border-box;
+        text-align: left;
+        .fa{
+            font-size:14px;
+            margin-right:8px;
+            color:$red;
+        }
+        .date,
+        .people{
+            font-weight: 600;
+            margin-bottom: 8px;
+            .fa{
+                margin-right:0;
+                margin-left:8px;
+                font-size:14px;
+            }
+        }
+        .cta{
+            width:135px;
+            height:35px;
+            border:1px solid $red;
+            font-size:12px;
+            font-weight: 500;
+            border-radius: 35px;
+            color:$red;
+            @extend .dFlex;
+            cursor: pointer;
+            background-color:$red;
+            color:$white;
+        }
+        +.item{
+            border-left:1px solid $red;
+        }
+        &:nth-last-child(1){
+            border-left:none;
+        }
+        &:nth-child(1){
+            padding:0;
+            padding-left:5px;
+        }
+    }
+}//booking_details
+
+.hotel{
+    position:absolute;
+    bottom:6vw;
+    left:0;
+    width:100%;
+    z-index: 2;
+}
+.car1{
+    position:absolute;
+    bottom:8%;
+    animation:drive 15s;
+    animation-iteration-count: infinite;
+    width:80px;
+    z-index: 3;
+}
+.car2{
+    position:absolute;
+    bottom:5%;
+    animation:drive 10s;
+    animation-iteration-count: infinite;
+    width:80px;
+    z-index: 3;
+}
+.car3{
+    position:absolute;
+    bottom:8%;
+    animation:drive_2 20s;
+    animation-iteration-count: infinite;
+    width:80px;
+    z-index: 3;
+}
+.car4{
+    position:absolute;
+    bottom:1%;
+    animation:drive_2 12s;
+    animation-iteration-count: infinite;
+    width:80px;
+    z-index: 3;
+}
+
+.dog_1{
+    height:6%;
+    position:absolute;
+    bottom:9%;
+    animation:drive 20s;
+    animation-iteration-count: infinite;
+    z-index: 3;
+}
+
+.cloud{
+    position:absolute;
+    top:-100px;
+    animation:cloud_1 50s;
+    animation-iteration-count: infinite;
+    width:800px;
+    z-index: 1;
+}
+
+.cloud_2{
+    position:absolute;
+    bottom:50%;
+    animation:cloud_2 60s;
+    animation-iteration-count: infinite;
+    width:500px;
+    z-index: 1;
+}
+.cloud_3{
+    position:absolute;
+    bottom:60%;
+    animation:cloud_2 30s;
+    animation-iteration-count: infinite;
+    width:500px;
+    z-index: 1;
+}
+.cloud_4{
+    position:absolute;
+    bottom:70%;
+    animation:cloud_2 70s;
+    animation-iteration-count: infinite;
+    width:500px;
+    z-index: 1;
+}
+@keyframes drive{
+    from{transform:translateX(-100px)}
+    to{transform:translateX(1950px)}
+}
+@keyframes drive_2{
+    from{transform:translateX(1950px)}
+    to{transform:translateX(-200px)}
+}
+@keyframes cloud_1{
+    from{transform:translateX(1900px)}
+    to{transform:translateX(-900px)}
+}
+@keyframes cloud_2{
+    from{transform:translateX(1900px)}
+    to{transform:translateX(-500px)}
+}
+
+//thanks for watching
+//please subscribe my channel
+
+
