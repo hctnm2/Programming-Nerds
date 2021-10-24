@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FindNests</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ephesis&family=Open+Sans+Condensed:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Promo</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="logo">
+        <img src="/images/logo.png" width="100%" height="100%" />
+      </p>
+      <div class="f">
+        <form>
+          <div class="pinfo">
+            <fieldset>
+              <legend>Personal Info</legend>
+              <span>
+                First name :<input type="text" name="first_name" required />
+              </span>
+              <span>
+                Middle name :<input type="text" name="middle_name" />
+              </span>
+              <span>
+                Last name :<input type="text" name="last_name" required />
+              </span>
+              <span> Email :<input type="email" name="email" required /> </span>
+              <span> Phone :<input type="tel" name="phone" required /> </span>
+            </fieldset>
+          </div>
+          <div class="location">
+            <fieldset>
+              <legend>Location</legend>
+              <p class="l">City : <input type="text" name="city" required /></p>
+              <p class="l">
+                State:
+                <select name="state" required>
+                  <option value="AP">Andhra Pradesh</option>
+                  <option value="AR">Arunachal Pradesh</option>
+                  <option value="AS">Assam</option>
+                  <option value="BR">Bihar</option>
+                  <option value="CH">Chattisgarh</option>
+                  <option value="GO">Goa</option>
+                  <option value="GT">Gujarat</option>
+                  <option value="H">Hariyana</option>
+                  <option value="HP">Himachal Pradesh</option>
+                  <option value="J">Jharkhand</option>
+                  <option value="KR">Karnataka</option>
+                  <option value="KE">Kerala</option>
+                  <option value="MP">Madhya Pradesh</option>
+                  <option value="MH">Maharashtra</option>
+                  <option value="MA">Manipur</option>
+                  <option value="ME">Meghalaya</option>
+                  <option value="MI">Mizoram</option>
+                  <option value="NA">Nagaland</option>
+                  <option value="O">Odisha</option>
+                  <option value="PN">Punjab</option>
+                  <option value="RA">Rajasthan</option>
+                  <option value="SI">Sikkim</option>
+                  <option value="TN">Tamil Nadu</option>
+                  <option value="TE">Telangana</option>
+                  <option value="TP">Tripua</option>
+                  <option value="UP">Uttar Pradesh</option>
+                  <option value="U">Uttarakhand</option>
+                  <option value="WB">West Bengal</option>
+                </select>
+              </p>
+            </fieldset>
+          </div>
+          <div class="details">
+            <fieldset class="outer">
+              <legend>Details</legend>
+
+              <p>
+                Have you stayed with us before?
+                <br />
+                Yes <input type="radio" name="stayed" value="yes" /><br />
+                No <input type="radio" name="stayed" value="no" />
+              </p>
+              <br />
+              <fieldset class="inner">
+                <legend>Amenities :</legend>
+                Room service
+                <input type="checkbox" name="room_service" /><br />
+                Refrigerator
+                <input type="checkbox" name="refrigerator" /><br />
+                Air Conditioner <input type="checkbox" name="ac" /><br />
+                Laundry Service<input type="checkbox" name="laundry" /><br />
+                Washing Machine <input type="checkbox" name="washing" /><br />
+                WiFi <input type="checkbox" name="wifi" /><br />
+              </fieldset>
+              <br />
+              <p>
+                Preferred Room Arrangment(For PG):
+                <select name="room">
+                  <option value="one">Single Sharing</option>
+                  <option value="two">Twin Sharing</option>
+                  <option value="three">Triple Sharing</option>
+                  <option value="four">Four Sharing</option>
+                </select>
+              </p>
+              <br />
+              <p>
+                Preferred Bed Arrangement(For Hotel):
+                <select name="bed">
+                  <option value="king">Single King Size</option>
+                  <option value="queen">Single Queen Size</option>
+                  <option value="DKing">Two King Size</option>
+                  <option value="DQueen">Two Queen Size</option>
+                  <option value="Cple">Couple</option>
+                </select>
+              </p>
+            </fieldset>
+          </div>
+          <br />
+          <div class="cs">
+            <p>
+              Special requests<br />
+              <textarea
+                placeholder="Is there anything else you'd like to let us know about your stay?"
+                rows="6"
+                cols="60"
+                name="comments"
+              ></textarea>
+            </p>
+            <br />
+            <p>
+              <input type="checkbox" name="opt_in" value="yes" />
+              Would you like to receive an occasional email with discount
+              coupons and special offers? If so, select the following box to
+              join our email list. <br />
+            </p>
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

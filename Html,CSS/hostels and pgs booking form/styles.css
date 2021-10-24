@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+}
+body {
+  font-family: "Ephesis", cursive;
+  font-family: "Open Sans Condensed", sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/b.jpg");
+  background-size: cover;
+  color: rgb(194, 196, 199);
+}
+.logo{
+  float: left;
+}
+.navbar {
+  height: 50px;
+  overflow: hidden;
+}
+.navbar ul {
+  align-content: center;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.navbar ul li {
+  display: inline-block;
+  transition: 0.7s all;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Brushscript", cursive;
+}
+.navbar ul li:hover {
+  background: rgb(34, 34, 34);
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: goldenrod;
+  cursor: pointer;
+  padding: 30px;
+}
+.l{
+  text-align: center;
+}
+.f {
+  display: block;
+  text-align: center; 
+}
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 3vh;
+  max-width: 64em;
+  margin: auto;
+}
+span {
+  display: block;
+  margin: 5px 0;
+  overflow: auto;
+  padding: 0 1%;
+  width: 98%;
+}
+.pinfo {
+  width: 50%;
+  align-content: center;
+  padding-left: 45vh;
+}
+.location{
+  margin-top: 5px;
+  float: none;
+  width: 48%;
+ padding-left: 45vh;
+  margin-right: 5px;
+}
+fieldset {
+  display: block;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 1%;
+  width: calc(98% - 4px);
+  border: 2px groove #bbb;
+}
+legend{
+  text-align: center;
+}
+.outer{
+  max-width: 60em;
+  margin-left: 4vh;
+}
+.inner{
+  max-width: 90%;
+  margin-left: 5vh;
+}
+.cs{
+  margin-left: 5vh;
+}
+textarea {
+  width: 50%;
+  padding: 5px;
+  border: 2px groove #bbb;
+  align-self: center;
+}
+input,
+select {
+  float: right;
+  border: none;
+  background: transparent;
+  margin-right: 10px;
+  border-bottom: 1px solid #000000;
+  padding: 2px 5px;
+  color: aliceblue;
+}
+
+select {
+  width: 162px;
+  color: aliceblue;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  float: left;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+input[type="submit"] {
+  float: left;
+  margin: 10px 0;
+  padding: 10px 40px;
+}
+
+input[type="submit"],
+fieldset,
+textarea {
+  border-radius: 5px;
+}
+@media screen and (max-width: 760px) {
+  .related {
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="email"],
+  select {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="email"],
+  select {
+    width: calc(100% - 4px);
+  }
+}
+input[type="submit"]{
+  border-radius: 20px;
+  background: rgb(25, 25, 26);
+  margin-left: 40em;
+  cursor: pointer;
+  font-size: medium;
+}
