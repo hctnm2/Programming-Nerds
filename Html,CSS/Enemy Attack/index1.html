@@ -1,0 +1,146 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Monster Killer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Gloria+Hallelujah&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+    body{
+  background: url("photos/davil.jpg") center right fixed;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 1rem 0.5rem;
+  font-family: 'Permanent Marker', cursive;
+}
+
+#heading{
+  padding-left: 40%;
+color:yellow;
+font-family: 'Gloria Hallelujah', cursive;
+}
+#heading1{
+  padding-left: 70%;
+color:yellow;
+font-family:'Caveat', cursive ;
+}
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 2rem;
+  color: #ff0062;
+  border: 1px solid #a927f5;
+}
+#image{
+ padding-right:100%;
+}
+progress[value]::-webkit-progress-bar,
+progress[value] {
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #a927f5;
+  transition: all 0.2s ease-out;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: #a927f5;
+  transition: all 0.2s ease-out;
+}
+
+button {
+    display: block;
+    position: relative;
+  font: inherit;
+  background: #ff0062;
+  border: 1px solid #ff0062;
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(255, 255, 255);
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0.5rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover,
+button:active {
+  background: #a927f5;
+  border-color: #a927f5;
+}
+
+.button::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height:3px;
+    color: linear-gradient(to right ,#56247f, #ff4343);
+    transform: scale(0);
+    transform-origin: left;
+    transition: transform .5s;
+
+}
+#health-levels,
+#controls {
+  margin: 2rem auto;
+  width: 30rem;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background: white;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+}
+
+#bonus-life {
+  font-weight: bold;
+  color: white;
+  background: #ff0062;
+  border: 1px solid #ff0062;
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 0.5rem;
+}
+
+    </style>
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <div id="heading">
+    <h1>ATTACK ENEMY</h1></div>
+
+    <section id="health-levels">
+      <h2>MONSTER HEALTH</h2>
+      <progress id="monster-health" max="100" value="100">100%</progress>
+      <h2>PLAYER HEALTH<span id="bonus-life">1</span></h2>
+      <progress id="player-health" max="100" value="100">100%</progress>
+    </section>
+    <section id="controls">
+      <button id="attack-btn">ATTACK</button>
+      <button id="strong-attack-btn">STRONG ATTACK</button>
+      <button id="heal-btn">HEAL</button>
+      <button id="log-btn">SHOW LOG</button>
+    </section>
+    <div id="heading1">
+        <h3>Designed by -Aman Sachan</h3></div>
+  </body>
+</html>
